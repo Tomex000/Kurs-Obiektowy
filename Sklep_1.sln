@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sklep_1", "Sklep_1\Sklep_1.csproj", "{3B2FE9DA-AB5A-425F-987B-E8D575A75383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{047ACB76-6FDF-4451-AF48-FD26F7868D62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testy", "Testy", "{CABF6110-21A2-4FCC-9E60-6A59DFF5FF3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientTest", "KlientTest\KlientTest.csproj", "{55C3D055-EADA-4033-9327-7FF200E7B967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,20 @@ Global
 		{3B2FE9DA-AB5A-425F-987B-E8D575A75383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B2FE9DA-AB5A-425F-987B-E8D575A75383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B2FE9DA-AB5A-425F-987B-E8D575A75383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047ACB76-6FDF-4451-AF48-FD26F7868D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047ACB76-6FDF-4451-AF48-FD26F7868D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047ACB76-6FDF-4451-AF48-FD26F7868D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047ACB76-6FDF-4451-AF48-FD26F7868D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C3D055-EADA-4033-9327-7FF200E7B967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C3D055-EADA-4033-9327-7FF200E7B967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C3D055-EADA-4033-9327-7FF200E7B967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C3D055-EADA-4033-9327-7FF200E7B967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55C3D055-EADA-4033-9327-7FF200E7B967} = {CABF6110-21A2-4FCC-9E60-6A59DFF5FF3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63CBFE0C-86BA-492C-87CC-3E20720FA9D6}
