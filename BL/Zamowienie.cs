@@ -8,6 +8,7 @@ namespace BL
 {
     public class Zamowienie
     {
+        #region kosntruktory
         public Zamowienie()
         {
 
@@ -19,7 +20,16 @@ namespace BL
         //Properties
         public int ZamowienieID { get;private set; }
         public DateTimeOffset? DataZamowienia { get; set; }
+        #endregion
 
+        #region wlasciwosci
+        public List<PozycjaZamowienia> pozycjaZamowienia { get; set; }
+        public int KlientId { get; set; }
+        public int AdresDostawyId { get; set; }
+
+        #endregion
+
+        #region metody
         //Metody
         /// <summary>
         /// Sprawdza dane zamowienia
@@ -63,5 +73,6 @@ namespace BL
             // pobiera wszystkich klientów
             return new List<Zamowienie>();
         }
+        #endregion
     }
 }

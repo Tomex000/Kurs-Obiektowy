@@ -8,6 +8,12 @@ namespace BL
 {
     public class KlientReposytory
     {
+        private AdresReposytory adresReposytory { get; set; }
+        public KlientReposytory()
+        {
+            adresReposytory = new AdresReposytory();
+        }
+
         /// <summary>
         /// Zapis klienta
         /// </summary>
@@ -24,7 +30,8 @@ namespace BL
         public Klient Pobierz(int klientId)
         {
             Klient klient = new Klient(klientId);
-
+            klient.ListaAdresow = adresReposytory.PobierzPoKlientId(klientId).ToList();
+            //tymczasowe
             if (klientId==1)
             {
                 klient.Email = "jakismail@ggg.pl";

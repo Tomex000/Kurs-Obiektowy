@@ -25,7 +25,7 @@ namespace BL
         {
             Zamowienie zamowienie = new Zamowienie(zamowienieId);
 
-            if (zamowienieId==10)
+            if (zamowienieId == 10)
             {
                 zamowienie.DataZamowienia = new DateTimeOffset(2019, 4, 20, 11, 00, 00, new TimeSpan(7, 0, 0));
             }
@@ -40,6 +40,60 @@ namespace BL
         {
             // pobiera wszystkich klientów
             return new List<Zamowienie>();
+        }
+        /// <summary>
+        /// Pobieranie 1 zamowienia do wyswietlenia
+        /// </summary>
+        /// <param name="zamowienieId"></param>
+        /// <returns></returns>
+        public WyswietlanieZamowienia PobierzZamowienieDoWyswietlenia(int zamowienieId)
+        {
+            WyswietlanieZamowienia wyswietlanieZamowienia = new WyswietlanieZamowienia();
+            //pobieranie zdefiniowanego zamowienia
+
+            //tymczasowe
+            if (zamowienieId == 10)
+            {
+                wyswietlanieZamowienia.Imie = "jacek";
+                wyswietlanieZamowienia.Nazwisko = "Kowalski";
+                wyswietlanieZamowienia.DataZamowienia = new DateTimeOffset(2018, 4, 21, 12, 00, 00, new TimeSpan(5, 0, 0));
+                wyswietlanieZamowienia.AdresDostawy = new Adres()
+                {
+                    AdresTyp = 2,
+                    Ulica = "jeden",
+                    Miasto = "Katowice",
+                    Kraj = "Polska",
+                    KodPocztowy = "12-555"
+                };
+                wyswietlanieZamowienia.WyswitlaniePozycjiZamowienia = new List<wyswietlaniePozycjiZamowienia>();
+
+                //kod pobierania elementow zamowienia
+
+                //tymczasowe
+                if (zamowienieId == 10)
+                {
+                    var wyswietlaniePozycjiZamowienia = new wyswietlaniePozycjiZamowienia()
+                    {
+                        NazwaProduktu = "Stol",
+                        CenaZakupu = 300.50M,
+                        Ilosc = 10
+
+                    };
+                    wyswietlanieZamowienia.WyswitlaniePozycjiZamowienia.Add(wyswietlaniePozycjiZamowienia);
+
+                    wyswietlaniePozycjiZamowienia = new wyswietlaniePozycjiZamowienia()
+                    {
+                        NazwaProduktu = "Blat",
+                        CenaZakupu = 50.33M,
+                        Ilosc = 5
+
+                    };
+                    wyswietlanieZamowienia.WyswitlaniePozycjiZamowienia.Add(wyswietlaniePozycjiZamowienia);
+                }
+
+
+            }
+            return wyswietlanieZamowienia;
         }
     }
 }

@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adres.cs" />
+    <Compile Include="AdresReposytory.cs" />
     <Compile Include="Klient.cs" />
     <Compile Include="KlientReposytory.cs" />
     <Compile Include="PozycjaZamowienia.cs" />
     <Compile Include="Produkt.cs" />
     <Compile Include="ProduktReposytory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wyswietlaniePozycjiZamowienia.cs" />
+    <Compile Include="WyswietlanieZamowienia.cs" />
     <Compile Include="Zamowienie.cs" />
     <Compile Include="ZamowienieReposytory.cs" />
   </ItemGroup>

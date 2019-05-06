@@ -4,17 +4,22 @@ namespace BL
 {
     public class Klient
     {
-        public Klient()
+        #region konstruktory
+        public Klient() :this(0)
         {
 
         }
         public Klient(int klientId)
         {
             KlientId = klientId;
+            ListaAdresow = new List<Adres>();
         }
-        
+        #endregion
+
+        #region właściwości
         //Właściwości
         public static int Licznik { get; set; }
+
         private string _nazwisko;
 
         public string Nazwisko
@@ -32,7 +37,9 @@ namespace BL
 
             }
         }
+
         private string _imie;
+
         public string Imie
         {
             get
@@ -44,8 +51,11 @@ namespace BL
                 _imie = value;
             }
         }
+
         public string Email { get; set; }
+
         public int KlientId { get; private set; }
+
         public string ImieNazwisko
         {
             get
@@ -62,10 +72,14 @@ namespace BL
                 return imieNazwisko;
             }
         }
+        
+        public List<Adres> ListaAdresow { get; set; }
 
-        public string HomeAddres { get; set; }
-        public string WorkAddres { get; set; }
+        public int KlientTyp { get; set; }
 
+        #endregion
+
+        #region metody
         //Metody
         public bool Zwaliduj()
         {
@@ -107,5 +121,6 @@ namespace BL
             // pobiera wszystkich klientów
             return new List<Klient>();
         }
+        #endregion
     }
 }
