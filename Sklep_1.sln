@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testy", "Testy", "{CABF6110
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlientTest", "KlientTest\KlientTest.csproj", "{55C3D055-EADA-4033-9327-7FF200E7B967}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{0863EE99-E72C-4591-BD69-71684062E641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTest", "CommonTest\CommonTest.csproj", "{B40D2BA5-63C3-4182-A043-58EC5EB50C2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +33,21 @@ Global
 		{55C3D055-EADA-4033-9327-7FF200E7B967}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C3D055-EADA-4033-9327-7FF200E7B967}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C3D055-EADA-4033-9327-7FF200E7B967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0863EE99-E72C-4591-BD69-71684062E641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0863EE99-E72C-4591-BD69-71684062E641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0863EE99-E72C-4591-BD69-71684062E641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0863EE99-E72C-4591-BD69-71684062E641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B40D2BA5-63C3-4182-A043-58EC5EB50C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40D2BA5-63C3-4182-A043-58EC5EB50C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40D2BA5-63C3-4182-A043-58EC5EB50C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40D2BA5-63C3-4182-A043-58EC5EB50C2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{55C3D055-EADA-4033-9327-7FF200E7B967} = {CABF6110-21A2-4FCC-9E60-6A59DFF5FF3C}
+		{B40D2BA5-63C3-4182-A043-58EC5EB50C2F} = {CABF6110-21A2-4FCC-9E60-6A59DFF5FF3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63CBFE0C-86BA-492C-87CC-3E20720FA9D6}

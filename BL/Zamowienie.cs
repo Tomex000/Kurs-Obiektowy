@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace BL
 {
-    public class Zamowienie
+    public class Zamowienie : KlasaBazowa, ILogowanie
     {
         #region kosntruktory
         public Zamowienie()
@@ -35,7 +36,7 @@ namespace BL
         /// Sprawdza dane zamowienia
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
 
@@ -72,6 +73,13 @@ namespace BL
         {
             // pobiera wszystkich klientów
             return new List<Zamowienie>();
+        }
+
+        public string Log()
+        {
+            var log = Zamowienie + ":" +
+                 "Data" + DataZamowienia.Value.Date + " " +
+                 "Status: " + StanObiektu.ToString();
         }
         #endregion
     }

@@ -18,9 +18,21 @@ namespace BL
         /// Zapis klienta
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Klient klient)
         {
-            return true;
+            var sukces = true;
+            if (klient.MaZmiany && klient.DanePrawidlowe)
+            {
+                if (klient.JestNowy)
+                {
+                    //insert do bazy
+                }
+                else
+                {
+                    //update do bazy
+                }
+            }
+            return sukces;
         }
         /// <summary>
         /// Pobiera nowego klienta
@@ -31,6 +43,8 @@ namespace BL
         {
             Klient klient = new Klient(klientId);
             klient.ListaAdresow = adresReposytory.PobierzPoKlientId(klientId).ToList();
+           //pobieranie okreslonego klienta z bazy
+            
             //tymczasowe
             if (klientId==1)
             {

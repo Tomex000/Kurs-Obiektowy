@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common;
 
 namespace BL
 {
-    public class Produkt
+    public class Produkt : KlasaBazowa, ILogowanie
     {
         //Konstruktor
         public Produkt()
@@ -20,14 +21,25 @@ namespace BL
         public int ProduktId { get; private set; }
         public decimal? AktualnaCena { get; set; }
         public string Opis { get; set; }
-        public string NazwaProduktu { get; set; }
+
+        private string _NazwaProduktu;
+
+        public string NazwaProduktu
+        {
+            get
+            {
+                return _NazwaProduktu.WstawSpacje();
+            }
+            set { _NazwaProduktu = value; }
+        }
+
 
         //Metody
         /// <summary>
         /// Sprawdza dane produktu
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
 
@@ -67,6 +79,13 @@ namespace BL
         {
             // pobiera wszystkich klientów
             return new List<Produkt>();
+        }
+
+        public string Log()
+        {
+            var log = ProduktId + ":" + NazwaProduktu + " " + "Opis" + Opis + " " + "Status: " + StanObiektu.ToString();
+
+            return log;
         }
     }
 }

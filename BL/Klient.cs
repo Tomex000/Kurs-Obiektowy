@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Common;
 
 namespace BL
 {
-    public class Klient
+    public class Klient : KlasaBazowa, ILogowanie
     {
         #region konstruktory
         public Klient() :this(0)
@@ -81,7 +82,7 @@ namespace BL
 
         #region metody
         //Metody
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
 
@@ -120,6 +121,13 @@ namespace BL
         {
             // pobiera wszystkich klientów
             return new List<Klient>();
+        }
+
+        public string Log()
+        {
+            var log = KlientId + ":" + ImieNazwisko + " " + "Email" + Email + " " + "Status: " + StanObiektu.ToString();
+
+            return log;
         }
         #endregion
     }

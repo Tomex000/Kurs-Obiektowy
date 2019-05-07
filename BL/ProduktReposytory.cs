@@ -27,9 +27,22 @@ namespace BL
         /// Zapis produktu
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Produkt produkt)
         {
-            return true;
+
+            var sukces = true;
+            if (produkt.MaZmiany && produkt.DanePrawidlowe)
+            {
+                if (produkt.JestNowy)
+                {
+                    //insert do bazy
+                }
+                else
+                {
+                    //update do bazy
+                }
+            }
+            return sukces;
         }
         /// <summary>
         /// Pobieranie wszystkich produktów

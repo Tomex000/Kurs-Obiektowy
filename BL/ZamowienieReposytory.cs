@@ -12,9 +12,21 @@ namespace BL
         /// Zapis zamowienia
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Zamowienie zamowienie)
         {
-            return true;
+            var sukces = true;
+            if (zamowienie.MaZmiany && zamowienie.DanePrawidlowe)
+            {
+                if (zamowienie.JestNowy)
+                {
+                    //insert do bazy
+                }
+                else
+                {
+                    //update do bazy
+                }
+            }
+            return sukces;
         }
         /// <summary>
         /// Pobiera 1 zamowienia
