@@ -77,9 +77,10 @@ namespace BL
 
         public string Log()
         {
-            var log = Zamowienie + ":" +
+            var log = ZamowienieID + ":" +
                  "Data" + DataZamowienia.Value.Date + " " +
                  "Status: " + StanObiektu.ToString();
+            return log;
         }
         #endregion
     }

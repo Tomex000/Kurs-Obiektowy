@@ -125,7 +125,7 @@ namespace BL
 
         public string Log()
         {
-            var log = KlientId + ":" + ImieNazwisko + " " + "Email" + Email + " " + "Status: " + StanObiektu.ToString();
+            var log = KlientId + ":" + ImieNazwisko + " " + "Email: " + Email + " " + "Status: " + StanObiektu.ToString();
 
             return log;
         }

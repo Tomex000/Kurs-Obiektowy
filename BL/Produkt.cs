@@ -83,7 +83,7 @@ namespace BL
 
         public string Log()
         {
-            var log = ProduktId + ":" + NazwaProduktu + " " + "Opis" + Opis + " " + "Status: " + StanObiektu.ToString();
+            var log = ProduktId + ":" + NazwaProduktu + " " + "Opis: " + Opis + " " + "Status: " + StanObiektu.ToString();
 
             return log;
         }
